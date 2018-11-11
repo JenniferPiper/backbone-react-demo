@@ -2,6 +2,10 @@
 var _ = require('underscore');
 // Import Backbone and its dependencies
 var Backbone = require('backbone');
+var React = require('react');
+var ReactDOM = require('react-dom');
+
+
 
 // Import the template
 var rawTemplate = require('./app.view.tpl');
