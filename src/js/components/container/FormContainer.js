@@ -2,39 +2,30 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Input from '../presentational/Input';
 
-class FormContainer extends React.Component {
+
+class FormContainer extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      seo_title: ''
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({ [event.target.id]: event.target.value });
+  }
+
   render() {
-    return <h2>This text comes from FormContainer.</h2>;
+    return (
+      <h1>Text from FormContainer.js</h1>
+    );
   }
 }
 
-// class FormContainer extends Component {
-//   constructor() {
-//     super();
-
-//     this.state = {
-//       seo_title: ''
-//     };
-
-//     this.handleChange = this.handleChange.bind(this);
-//   }
-
-//   handleChange(event) {
-//     this.setState({ [event.target.id]: event.target.value });
-//   }
-
-//   render() {
-//     return (
-//       <h1>Text from FormContainer.js</h1>
-//     );
-//   }
-// }
-
 export default FormContainer;
-
-// const wrapper = document.getElementById('create-article-form');
-// // wrapper ? ReactDOM.render(<FormContainer />, wrapper) : false;
-// ReactDOM.render(<FormContainer />, wrapper);
 
 
 

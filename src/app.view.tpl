@@ -1,2 +1,2 @@
 <%= message %>
-<div id="createArticleForm">Form goes here.</div>
+<div id="create-article-form">Form React component renders here.</div>
