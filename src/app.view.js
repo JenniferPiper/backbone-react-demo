@@ -1,18 +1,19 @@
 // Import Underscore for templating
-import _ from 'underscore';
-//var _ = require('underscore');
+//import _ from 'underscore';
+var _ = require('underscore');
 // Import Backbone and its dependencies
-import Backbone from 'backbone';
-//var Backbone = require('backbone');
-import React from 'react';
-import ReactDOM from 'react-dom';
-//var ReactDOM = require('react-dom');
+//import Backbone from 'backbone';
+var Backbone = require('backbone');
+//import React from 'react';
+var React = require('react');
+//import ReactDOM from 'react-dom';
+var ReactDOM = require('react-dom');
 //import createReactClass from 'create-react-class';
-//var createReactClass = require('create-react-class');
+var createReactClass = require('create-react-class');
 
-//var FormContainer = require('./js/components/container/FormContainer');
+var FormContainer = require('./js/components/container/FormContainer').default;
 
-import FormContainer from './js/components/container/FormContainer';
+//import FormContainer from './js/components/container/FormContainer';
 // class FormContainer extends React.Component {
 //   render() {
 //     return <h2>This text comes from Local FormContainer.</h2>;
