@@ -8,7 +8,7 @@ class FormContainer extends Component {
     super();
 
     this.state = {
-      seo_title: '',
+      entry_title: '',
       entered_text: ''
     };
 
@@ -32,17 +32,17 @@ class FormContainer extends Component {
           onSubmit={this.handleSubmit}
           >
           <Input
-            text='SEO title'
-            label='seo_title'
+            text='Entry Title'
+            label='entry_title'
             type='text'
-            id='seo_title'
-            value={this.state.seo_title}
+            id='entry_title'
+            value={this.state.entry_title}
             handleChange={this.handleChange}
           />
           <Input
             text='Enter some text here:'
             label='entered-text'
-            type='textarea'
+            type='text'
             id='entered_text'
             value={this.state.entered_text}
             handleChange={this.handleChange}
@@ -55,6 +55,3 @@ class FormContainer extends Component {
 }
 
 export default FormContainer;
-
-
-
