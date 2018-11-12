@@ -2,15 +2,16 @@ import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import Input from '../presentational/Input';
 
+const initialState = {
+  entry_title: '',
+  entered_text: ''
+}
 
 class FormContainer extends Component {
   constructor() {
     super();
 
-    this.state = {
-      entry_title: '',
-      entered_text: ''
-    };
+    this.state = initialState;
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,6 +23,7 @@ class FormContainer extends Component {
   handleSubmit(event) {
     event.preventDefault();
     console.log('this.state:', this.state);
+    this.setState(initialState);
   }
 
   render() {
