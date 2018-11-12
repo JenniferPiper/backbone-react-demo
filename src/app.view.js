@@ -1,29 +1,37 @@
 // Import Underscore for templating
-var _ = require('underscore');
+import _ from 'underscore';
+//var _ = require('underscore');
 // Import Backbone and its dependencies
-var Backbone = require('backbone');
-var React = require('react');
-var ReactDOM = require('react-dom');
-var createReactClass = require('create-react-class');
+import Backbone from 'backbone';
+//var Backbone = require('backbone');
+import React from 'react';
+import ReactDOM from 'react-dom';
+//var ReactDOM = require('react-dom');
+//import createReactClass from 'create-react-class';
+//var createReactClass = require('create-react-class');
 
-var FormContainer = require('./js/components/container/FormContainer');
+//var FormContainer = require('./js/components/container/FormContainer');
 
-var myComponent = createReactClass({
-  render: function() {
-    return '<h1>Text from myComponent</h1>';
-  }
-});
+import FormContainer from './js/components/container/FormContainer';
+// class FormContainer extends React.Component {
+//   render() {
+//     return <h2>This text comes from Local FormContainer.</h2>;
+//   }
+// }
 
-class anotherComponent extends React.Component {
+class MyComponent extends React.Component {
   render() {
-    return <h2>This text comes from anotherComponent.</h2>;
+    return <h2>This text comes from MyComponent.</h2>;
+  }
+}
+class AnotherComponent extends React.Component {
+  render() {
+    return <h2>This text comes from AnotherComponent.</h2>;
   }
 }
 
 // Import the template
 var rawTemplate = require('./app.view.tpl');
-
-
 var viewOptions = {
   el: 'body',
 
@@ -41,16 +49,21 @@ var viewOptions = {
 
     // Update the DOM
     this.$el.html(renderedHtml);  
+    const wrapper = document.getElementById('createArticleForm');
 
-    const wrapper = document.getElementById('create-article-form');
-    wrapper.textContent += ' Eventually.';
+   // wrapper.textContent += ' Eventually.';
+   
+   
+   
    // ReactDOM.render(<FormContainer />, wrapper);
-   ReactDOM.render(<h1>Does this work</h1>, wrapper);
+  
+   ReactDOM.render(<div><MyComponent /><AnotherComponent /><FormContainer /></div>, wrapper);
 
   }
 };
 
 // Export our extended view
+//export default Backbone.View.extend(viewOptions);
 module.exports = Backbone.View.extend(viewOptions);
 
 

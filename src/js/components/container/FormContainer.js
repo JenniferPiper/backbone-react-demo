@@ -2,27 +2,33 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Input from '../presentational/Input';
 
-class FormContainer extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      seo_title: ''
-    };
-
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(event) {
-    this.setState({ [event.target.id]: event.target.value });
-  }
-
+class FormContainer extends React.Component {
   render() {
-    return (
-      <h1>Text from FormContainer.js</h1>
-    );
+    return <h2>This text comes from FormContainer.</h2>;
   }
 }
+
+// class FormContainer extends Component {
+//   constructor() {
+//     super();
+
+//     this.state = {
+//       seo_title: ''
+//     };
+
+//     this.handleChange = this.handleChange.bind(this);
+//   }
+
+//   handleChange(event) {
+//     this.setState({ [event.target.id]: event.target.value });
+//   }
+
+//   render() {
+//     return (
+//       <h1>Text from FormContainer.js</h1>
+//     );
+//   }
+// }
 
 export default FormContainer;
 

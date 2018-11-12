@@ -1,2 +1,2 @@
 <%= message %>
-<div id="create-article-form">Form goes here.</div>
+<div id="createArticleForm">Form goes here.</div>

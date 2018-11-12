@@ -4,6 +4,7 @@ const PUBLIC_PATH = resolve(__dirname, 'public');
 const SRC_PATH = resolve(__dirname, 'src');
 
 module.exports = {
+  mode: 'development',
   entry: `${SRC_PATH}/index.js`,
   output: {
     filename: 'bundle.js',
