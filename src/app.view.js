@@ -24,7 +24,7 @@ var viewOptions = {
 
   render: function () {
     // Render the template
-    var renderedHtml = this.template( { message: 'App Ready, Now With Templates!' });
+    var renderedHtml = this.template( { message: '<h1>Backbone.js with React Demo</h1><p><em>by Jennifer Piper</em></p>' });
 
     // Update the DOM
     this.$el.html(renderedHtml);  
