@@ -8,7 +8,8 @@ const initialState = {
   entered_title: '',
   submitted_title: '',
   entered_text: '',
-  submitted_text: ''
+  submitted_text: '',
+  heading_text: ''
 }
 
 class FormContainer extends Component {
@@ -28,6 +29,7 @@ class FormContainer extends Component {
   handleSubmit(event) {
     event.preventDefault();
     console.log('this.state:', this.state);
+    this.setState({heading_text: 'You submitted:'});
     this.setState({submitted_text: this.state.entered_text});
     this.setState({submitted_title: this.state.entered_title});
   }
@@ -64,6 +66,7 @@ class FormContainer extends Component {
           <button type='reset'>Clear</button>
         </form>
         <ContentDisplay 
+        heading_text={this.state.heading_text}
         title={this.state.submitted_title}
         entered_text={this.state.submitted_text}/>
       </Fragment>

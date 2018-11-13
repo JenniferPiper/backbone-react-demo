@@ -4,8 +4,8 @@ import React from 'react';
 
 const ContentDisplay = (props) => (
   <div className='content-display'>
-<h1>You submitted:</h1>
-<h2>{props.title}</h2>
+<h2>{props.heading_text}</h2>
+<h3>{props.title}</h3>
 <p>{props.entered_text}</p>
   </div>
 );
