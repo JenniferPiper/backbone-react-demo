@@ -1,12 +1,10 @@
+'use strict';
+
 // Import Underscore for templating
 var _ = require('underscore');
-
 var Backbone = require('backbone');
-
 var React = require('react');
 var ReactDOM = require('react-dom');
-var createReactClass = require('create-react-class');
-
 var FormContainer = require('./js/components/container/FormContainer').default;
 
 // Import the template
@@ -32,7 +30,6 @@ var viewOptions = {
    
     ReactDOM.render(<FormContainer />, wrapper);
   
-
   }
 };
 

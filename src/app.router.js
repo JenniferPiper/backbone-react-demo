@@ -1,3 +1,5 @@
+'use strict';
+
 // Import Backbone and its dependencies
 var Backbone = require('backbone');
 
