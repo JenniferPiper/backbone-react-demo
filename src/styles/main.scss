@@ -23,6 +23,7 @@ p, h1, h2, h3{
 
 h1 {
   font-size: 1.8rem;
+  margin-bottom: 0.4rem;
 }
 
 .error,
@@ -68,7 +69,8 @@ ul {
 }
 
 h1 + p {
-  margin-top: 0;
+  margin-top: 0.2rem;
+  margin-bottom: 1.5rem;
 }
 
 .error {
