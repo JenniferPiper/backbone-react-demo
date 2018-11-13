@@ -2,10 +2,13 @@
 
 import React, { Component, Fragment } from 'react';
 import Input from '../presentational/Input';
+import ContentDisplay from '../presentational/ContentDisplay';
 
 const initialState = {
-  entry_title: '',
-  entered_text: ''
+  entered_title: '',
+  submitted_title: '',
+  entered_text: '',
+  submitted_text: ''
 }
 
 class FormContainer extends Component {
@@ -16,6 +19,7 @@ class FormContainer extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleReset = this.handleReset.bind(this);
   }
 
   handleChange(event) {
@@ -24,6 +28,11 @@ class FormContainer extends Component {
   handleSubmit(event) {
     event.preventDefault();
     console.log('this.state:', this.state);
+    this.setState({submitted_text: this.state.entered_text});
+    this.setState({submitted_title: this.state.entered_title});
+  }
+  handleReset(event) {
+    event.preventDefault();
     this.setState(initialState);
   }
 
@@ -33,13 +42,14 @@ class FormContainer extends Component {
         <form 
           id='article-form'
           onSubmit={this.handleSubmit}
+          onReset={this.handleReset}
           >
           <Input
             text='Entry Title'
-            label='entry_title'
+            label='entered_title'
             type='text'
-            id='entry_title'
-            value={this.state.entry_title}
+            id='entered_title'
+            value={this.state.entered_title}
             handleChange={this.handleChange}
           />
           <Input
@@ -51,7 +61,11 @@ class FormContainer extends Component {
             handleChange={this.handleChange}
           />
           <button type='submit'>Submit</button>
+          <button type='reset'>Clear</button>
         </form>
+        <ContentDisplay 
+        title={this.state.submitted_title}
+        entered_text={this.state.submitted_text}/>
       </Fragment>
     );
   }

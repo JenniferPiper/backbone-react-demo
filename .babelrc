@@ -1,4 +1,4 @@
 {
-  "presets": ["react", "babel-preset-react"],
+  "presets": ["react", "env", "babel-preset-react"],
   "plugins" : ["transform-react-jsx-source"]
 }
