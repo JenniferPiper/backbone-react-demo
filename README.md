@@ -2,6 +2,12 @@ Backbone.js with React Demo
 ===
 *by Jennifer Piper*
 
+A very basic proof-of-concept to render React components from inside a Backbone view.
+
+Deployed app at: https://jenwill.github.io/backbone-react-demo/public/
+
+On submit, text entered into the form is echoed on the page under the form.
+
 
 ### Code snippets and inspiration from:
 
